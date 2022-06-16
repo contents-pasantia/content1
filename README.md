@@ -25,7 +25,7 @@ Recursos:
 ## Actividades
 1. Conocer el funcionamiento basico la terminal.
 2. Creacion de un Script Basico
-3. Mi primer script.
+3. Mi primer script. [enalce](./Resource/MyfirstScript.md)
 
 
 Recursos:
