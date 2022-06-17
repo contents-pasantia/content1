@@ -1,5 +1,5 @@
 ---
-title       : Pasantia22.2 | intro
+title       : Prework
 author      : kevin Pilo
 description : Introduccion pasantia 22.2.
 marp        : true
