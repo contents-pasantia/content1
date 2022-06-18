@@ -1,0 +1,148 @@
+
+# comandos y tipos de coamandos
+> type cd // muestra tipo de comandos
+> type mkdir
+> type ls // alias
+> alias l="ls -lh" // lista en formato humano
+
+#ayuda
+> help cd  
+> man cd 
+> whatis cd
+
+
+
+
+
+# wildcards
+> ls *.txt //busqueda de archvios utilizando el comodin *
+> ls datos*
+> ls datos?
+> ls -d [[:upper:]]*
+> ls -d [[:lower:]]*
+> ls -d [ad]*
+> ls [ai]*
+
+- fitro por digitosi
+
+
+# Redirecciones shell
+
+- stdin //standard input
+- stdout // codigo 1 file description
+- stderr // codigo 2 file description
+
+> ls Pictures > archivos.txt  //sobreescribe 
+> ls Downlouds > archivos.txt
+> ls Downlouds >> archivos.txt //agrega
+
+> ls lslslls > error.txt // solo el ouput
+
+> ls lslslien 2> error.txt // el eroor
+> ls asss > output.txt 2>&1 // redirigimos un error y el output
+
+# redirecciones PIPE operator
+> echo "Hola pasantes" // estandar input
+> cat < erro.txt
+> ls -lh | less // convierte el oput de un comando a un input con de otro
+> ls -lh | sort 
+
+
+# operadores de control
+
+> ls; mkdir hola; cal // ejecucion de comandos de manera sincrona
+> ls & date & cal     // de maneara asincrona
+> mkdir test && cd test //condicional operador and
+> cd ajjaja || touch archivo.txt || echo "archivo creado" //  tener la coherencia 
+
+# perimisos
+// tipos de archivos 
+> cat > mitexto.txt
+> chmod 755 mitexto.txt  // de forma octal
+> chmod u-r mitexto.txt 
+> chmod u-x,g=w mitext.txt
+
+## variables de entorno
+// link simbolico o link desde la terminal
+> ln -s <ruta> nombre del link 
+> printenv //lista nuestra variables de entorno
+> echo $HOME, la ruta de nuestro usuario
+
+
+## comandos de busqueda
+> which cd // busqueda en el path
+> find ./ -size 20m 
+> find ./ -type d <nombre> 
+
+## grep
+> grep Towers movies.csv
+> grep the movies.csv
+> grep -i the movies.csv | more //incluir mayuscula
+> grep -c the movies.csv //devuelve el numero de concidencias
+> grep -ci the movies.csv // con mayusculas
+> grep -vi towers movies.csv // devuelve los diferentes a towers
+> grep -v towers movies.csv | movies.txt 
+> wc -l movies.csv // cuenta el nuemro de palabras 
+
+## utilidades de red
+
+> ifconfig
+> ping // si una direccion esta activo
+> curl www.google.com //traer archivo  en formato de texto
+> wget // traer de internet y descargar el archivo
+> traceroute // traza  el camino de coneccion
+> netstat -i // lista nuestro dispotivos y conexion de redes.
+
+## comprension
+> tar -cvf ToCompress.tar ToCompress //comprimir y verbose
+> tar -cvzf ToCompress.tar.gz ToCompress // formato recomendado.
+> tar -xzvf Tocompress.tar.gz // descomprimir
+> zip -r ToCompressInZip.zip ToCompress // formato zip
+> unzip TocompressInzip.zip // descompirmirlo
+
+
+
+
+
+
+//install nodejs v14
+curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+
+sudo chown -R <userlinux> /path/to/folder "~/folder"
+
+// error de linux al actualizar
+rm -rf /var/lib/apt/lists/*
+
+
+
+
+
+# personalizar terminal
+> sudo apt-get install zsh
+> sudo pacman -S zsh
+> sudo dnf install zsh
+
+> chsh -s $(which zsh) //dejar terminal por defecto
+
+instalar oh-myzsh https://ohmyz.sh/
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+
+install: git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+> vim .zshrc y pegar ZSH_THEME="powerlevel10k/powerlevel10k"
+> zsh //para cofiguraciones
+
+
+
+
+- ssh key git
+> ssh-keygen -t rsa -b 4096 -C "tu@email.com"
+
+
+
+
+
