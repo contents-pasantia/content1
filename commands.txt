@@ -144,5 +144,28 @@ install: git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_
 
 
 
+//hola mundo
+#!/bin/bash
+echo "Hello World"
 
 
+//espera 5 minutos
+#!/bin/bash
+
+echo “Wait for 5 seconds”
+sleep 5
+echo “Completed”
+
+
+
+//crear un directorio y comprobar su existencia
+#!/bin/bash
+echo "Enter directory name"
+read ndir
+if [ -d "$ndir" ]
+then
+echo "Directory exist"
+else
+`mkdir $ndir`
+echo "Directory created"
+fi
